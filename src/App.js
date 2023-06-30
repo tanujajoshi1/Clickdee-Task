@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
+import Card from './Card';
 import './App.css';
+import img1 from './img/target.png';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className='container'>
+      <div className='leftside'>
+        <h1>Why The Industry Chooses Clickdee?</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          We understand performance marketing from every angle and every stage of the funnel. Our clients trust that we know what metrics move their business towards growth. Our publisher and affiliate partners know that we make maximum revenue and ROAS a main focus when growing our partnerships.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
+
+      <div className='rightside'>
+        <div className='card-row'>
+          <Card title="Choose Your Local Targeting" image='./img/campaign.png' description="Our targeted and tracked calls are tailored to your business needs, audience, and geolocation." />
+          <Card title="Track Your Conversion" image="./img/conversion.png" description="We use the most progressive tracking and analytics technology to ensure that every call can be tracked and evaluated" />
+        </div>
+
+        <div className='card-row'>
+          <Card title="Customized Campaigns" image="./img/campaign.png" description="Audiences, budgets, and goals: you decide the criteria for your digital ad campaign, and we’ll do the rest." />
+          <Card title="Get Dedicated Support Team" image="./img/support.png" description="We constantly monitor quality control! Our affiliate network of publishers are digital ad experts that have been vetted." />
+          <Card title="Quality Assurance" image="./img/quality.png" description="We constantly monitor quality control! Our affiliate network of publishers are digital ad experts that have been vetted." />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
